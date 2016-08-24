@@ -17,24 +17,27 @@
 ### PSEUDOCODE EXAMPLE:  ##
 ###########################
 
-# PROGRAM dear_grandma method
+def dear_grandma
 #     Keep LOOPING to get more input
-#         Prompt user for input
-#         Ask what to say to grandma
-#
-#         IF we said "BYE"
-#             stop asking for more input and leave
-#         END
-#
-#         IF what I just said is too quiet
-#             Grandma responds "HUH!? SPEAK UP, SONNY!"
-#         ELSE
-#             Grandma responds "NO, NOT SINCE 1938!"
-#         END
-#
-#     END
-# END
+      while true
+#        Ask what to say to grandma
+          puts "say something to Grandma"
+          user_input = gets.chomp
 
+#         IF we said "BYE", stop asking for more input and leave
+          if user_input == "BYE"
+            break
+          end
+
+#         IF what I just said is too quiet
+          if user_input.upcase != user_input
+              puts "HUH!? SPEAK UP SONNY!"
+
+          else
+              puts "NO, NOT SINCE 1938!"
+          end
+      end
+end
 
 
 
